@@ -26,6 +26,7 @@
         overflow-x: hidden;
       }
 
+      /* الخلفية البنفسجية الخفيفة */
       .pattern {
         position: absolute;
         top: 0;
@@ -39,6 +40,7 @@
         z-index: 1;
       }
 
+      /* المحتوى الأساسي */
       .content {
         position: relative;
         z-index: 2;
@@ -50,20 +52,24 @@
         height: 100vh;
         padding: 0 20px;
         color: var(--text-dark);
+        transform: translateY(70px); /* نزلنا المحتوى شوي لتحت */
       }
 
+      /* اللوقو */
       .logo {
-        width: 300px;
-        margin-bottom: 40px;
+        width: 380px; /* أكبر وأوضح */
+        margin-bottom: 50px;
       }
 
+      /* العنوان */
       h1 {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
         font-weight: 700;
         color: var(--main-purple);
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
 
+      /* النص التسويقي */
       p {
         font-size: 1.2rem;
         max-width: 700px;
@@ -72,6 +78,7 @@
         margin-bottom: 50px;
       }
 
+      /* قسم التواصل */
       .contacts {
         margin-top: 30px;
       }
@@ -94,10 +101,15 @@
         color: var(--main-purple);
       }
 
+      /* استجابة للجوال */
       @media (max-width: 700px) {
         .logo {
-          width: 220px;
-          margin-bottom: 25px;
+          width: 260px;
+          margin-bottom: 35px;
+        }
+
+        .content {
+          transform: translateY(40px);
         }
 
         h1 {
@@ -106,7 +118,6 @@
 
         p {
           font-size: 1.05rem;
-          line-height: 1.8;
         }
 
         .contacts h2 {
@@ -120,13 +131,15 @@
 
     <div class="content">
       <img src="logo.png" alt="شعار سلعة" class="logo" />
+
       <h1>سلعة — موردك الأول في الدواجن</h1>
 
       <p>
         مع <strong style="color: var(--main-purple)">سلعة</strong> الدواجن دايم
         متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل تقارير دقيقة بمشترياتك!
-        <br />أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع —
-        اشتغل وأنت مرتاح البال.
+        <br />
+        أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع — اشتغل وأنت
+        مرتاح البال.
       </p>
 
       <div class="contacts">
