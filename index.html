@@ -8,7 +8,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 
       :root {
-        --main-purple: #745ff2; 
+        --main-purple: #745ff2;
         --text-dark: #1f1f1f;
       }
 
@@ -24,8 +24,12 @@
         position: relative;
         min-height: 100vh;
         overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
+      /* الباترن الشفاف */
       .pattern {
         position: absolute;
         top: 0;
@@ -34,7 +38,7 @@
         height: 100%;
         background-image: url("pattern.png");
         background-repeat: repeat;
-        background-size: 180px;
+        background-size: 160px;
         opacity: 0.08;
         z-index: 1;
       }
@@ -42,53 +46,47 @@
       .content {
         position: relative;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 80px;
+        width: 100%;
+        max-width: 900px;
+        padding: 60px 40px;
+        text-align: right;
         color: var(--text-dark);
       }
 
       .logo {
-  width: 380px;
-  margin-bottom: 50px;
-}
+        width: 260px;
+        margin-bottom: 40px;
+      }
 
-@media (max-width: 700px) {
-  .logo {
-    width: 260px; 
-  }
-}
       h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: 700;
-        margin-bottom: 15px;
         color: var(--main-purple);
+        margin-bottom: 15px;
       }
 
       p {
-        font-size: 1.2rem;
-        line-height: 1.9;
-        color: var(--text-dark);
-        max-width: 650px;
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 40px;
       }
 
       .contacts {
-        margin-top: 60px;
+        margin-top: 20px;
       }
 
       .contacts h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 700;
         color: var(--main-purple);
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
 
       .contacts p {
-        font-size: 1.05rem;
-        color: var(--text-dark);
+        font-size: 1rem;
         line-height: 1.8;
+        color: var(--text-dark);
       }
 
       .contacts span {
@@ -103,7 +101,6 @@
 
         .logo {
           width: 200px;
-          margin-bottom: 35px;
         }
 
         h1 {
@@ -115,7 +112,7 @@
         }
 
         .contacts h2 {
-          font-size: 1.3rem;
+          font-size: 1.25rem;
         }
       }
     </style>
@@ -125,6 +122,7 @@
 
     <div class="content">
       <img src="logo.png" alt="شعار سلعة" class="logo" />
+
       <h1>سلعة — موردك الأول في الدواجن</h1>
 
       <p>
