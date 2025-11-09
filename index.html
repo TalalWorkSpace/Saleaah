@@ -25,7 +25,7 @@
         overflow-x: hidden;
       }
 
-      /* الخلفية المنقوشة */
+      /* الخلفية */
       .pattern {
         position: absolute;
         top: 0;
@@ -39,7 +39,7 @@
         z-index: 1;
       }
 
-      /* المحتوى الأساسي */
+      /* المحتوى */
       .content {
         position: relative;
         z-index: 2;
@@ -54,12 +54,14 @@
 
       /* اللوقو */
       .logo {
-        width: 340px; /* مقاس متوازن */
-        margin-bottom: 15px; /* قريب من النص */
-        margin-top: 0; /* فوق شوي */
+        width: 330px;
+        margin-bottom: 15px;
+        margin-top: 0;
+        filter: brightness(0) saturate(100%) invert(52%) sepia(75%)
+          saturate(5576%) hue-rotate(225deg) brightness(101%) contrast(95%);
+        /* يحوله بنفسجي */
       }
 
-      /* العنوان */
       h1 {
         font-size: 2rem;
         font-weight: 700;
@@ -67,7 +69,6 @@
         margin-bottom: 15px;
       }
 
-      /* النص التعريفي */
       p {
         font-size: 1.1rem;
         line-height: 1.8;
@@ -76,7 +77,6 @@
         margin-bottom: 40px;
       }
 
-      /* قسم المبيعات */
       .contacts {
         margin-top: 15px;
       }
@@ -99,21 +99,17 @@
         color: var(--main-purple);
       }
 
-      /* للجوال */
       @media (max-width: 700px) {
         .logo {
           width: 230px;
           margin-bottom: 10px;
         }
-
         h1 {
           font-size: 1.5rem;
         }
-
         p {
           font-size: 1rem;
         }
-
         .contacts h2 {
           font-size: 1.2rem;
         }
