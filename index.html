@@ -9,7 +9,7 @@
 
       :root {
         --main-purple: #745ff2;
-        --text-dark: #222;
+        --text-dark: #1f1f1f;
       }
 
       * {
@@ -21,65 +21,53 @@
       body {
         font-family: "Cairo", sans-serif;
         background-color: #ffffff;
-        position: relative;
-        overflow-x: hidden;
-      }
-
-      /* pattern خفيف شفاف */
-      .pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: url("pattern.png");
         background-repeat: repeat;
         background-size: 170px;
-        opacity: 0.08;
-        z-index: 1;
+        background-attachment: fixed;
+        overflow-x: hidden;
       }
 
-      .content {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 70px 20px 90px;
-        max-width: 800px;
-        margin: auto;
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 60px;
+        text-align: right;
+        direction: rtl;
       }
 
-      /* شعار بلونه الطبيعي البنفسجي */
+      /* الشعار بنفس الحجم لكن بنفسجي */
       .logo {
-        width: 280px;
-        margin-bottom: 25px;
+        width: 250px;
+        margin-bottom: 40px;
+        filter: brightness(0) saturate(100%) invert(52%) sepia(75%)
+          saturate(5576%) hue-rotate(225deg) brightness(101%) contrast(95%);
+        /* يحول الشعار للأساس البنفسجي بدون مطابقة كاملة للون Bootstrap */
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
         font-weight: 700;
         color: var(--main-purple);
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
 
       p {
         font-size: 1.1rem;
         line-height: 1.9;
-        color: var(--text-dark);
-        max-width: 650px;
+        color: #333;
+        max-width: 700px;
         margin-bottom: 40px;
       }
 
       .contacts {
-        margin-top: 15px;
+        margin-top: 20px;
       }
 
       .contacts h2 {
         font-size: 1.4rem;
-        font-weight: 700;
         color: var(--main-purple);
+        font-weight: 700;
         margin-bottom: 10px;
       }
 
@@ -95,9 +83,12 @@
       }
 
       @media (max-width: 700px) {
+        .container {
+          padding: 40px 25px;
+        }
         .logo {
-          width: 210px;
-          margin-bottom: 20px;
+          width: 200px;
+          margin-bottom: 25px;
         }
         h1 {
           font-size: 1.6rem;
@@ -109,17 +100,15 @@
     </style>
   </head>
   <body>
-    <!-- خلفية الباترن -->
-    <div class="pattern"></div>
-
-    <div class="content">
+    <div class="container">
       <img src="logo.png" alt="شعار سلعة" class="logo" />
 
       <h1>سلعة — موردك الأول في الدواجن</h1>
 
       <p>
         مع <strong style="color: var(--main-purple)">سلعة</strong> الدواجن دايم
-        متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل تقارير دقيقة بمشترياتك!<br />
+        متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل على تقارير دقيقة بمشترياتك!
+        <br />
         أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع — اشتغل وأنت
         مرتاح البال.
       </p>
