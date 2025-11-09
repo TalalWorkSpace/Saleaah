@@ -22,11 +22,10 @@
         font-family: "Cairo", sans-serif;
         background-color: #ffffff;
         position: relative;
-        min-height: 100vh;
         overflow-x: hidden;
       }
 
-      /* خلفية الباترن */
+      /* الخلفية */
       .pattern {
         position: absolute;
         top: 0;
@@ -48,50 +47,50 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 100px 20px 60px 20px;
-        color: var(--text-dark);
+        padding: 80px 20px;
+        max-width: 900px;
+        margin: auto;
       }
 
-      /* اللوقو: نكبر العرض وننزله فقط */
+      /* اللوقو */
       .logo {
-        width: 430px; /* أعرض بنسبة ممتازة */
-        margin-bottom: 20px;
-        transform: translateY(40px); /* نزول الشعار فقط */
+        width: 380px;
+        margin-bottom: 25px; /* قريب للنص */
+        margin-top: 40px;
       }
 
       /* العنوان */
       h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: 700;
         color: var(--main-purple);
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
-      /* النص التسويقي */
+      /* النص */
       p {
-        font-size: 1.2rem;
-        max-width: 700px;
+        font-size: 1.1rem;
         line-height: 1.9;
         color: #333;
-        margin-bottom: 50px;
+        max-width: 700px;
+        margin-bottom: 40px;
       }
 
-      /* قسم التواصل */
+      /* التواصل */
       .contacts {
         margin-top: 20px;
       }
 
       .contacts h2 {
         font-size: 1.4rem;
-        font-weight: 700;
         color: var(--main-purple);
         margin-bottom: 10px;
       }
 
       .contacts p {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1rem;
         color: var(--text-dark);
+        line-height: 1.8;
       }
 
       .contacts span {
@@ -99,23 +98,24 @@
         color: var(--main-purple);
       }
 
-      /* للموبايل */
+      /* موبايل */
       @media (max-width: 700px) {
         .logo {
-          width: 300px;
-          transform: translateY(25px);
+          width: 250px;
+          margin-top: 30px;
+          margin-bottom: 20px;
         }
 
         h1 {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
 
         p {
-          font-size: 1.05rem;
+          font-size: 1rem;
         }
 
         .contacts h2 {
-          font-size: 1.25rem;
+          font-size: 1.2rem;
         }
       }
     </style>
