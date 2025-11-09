@@ -7,6 +7,11 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 
+      :root {
+        --main-purple: #745ff2; 
+        --text-dark: #1f1f1f;
+      }
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -30,7 +35,7 @@
         background-image: url("pattern.png");
         background-repeat: repeat;
         background-size: 180px;
-        opacity: 0.08; 
+        opacity: 0.08;
         z-index: 1;
       }
 
@@ -42,7 +47,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding: 80px;
-        color: #202020;
+        color: var(--text-dark);
       }
 
       .logo {
@@ -54,25 +59,36 @@
         font-size: 2rem;
         font-weight: 700;
         margin-bottom: 15px;
-        color: #111;
+        color: var(--main-purple);
       }
 
       p {
         font-size: 1.2rem;
         line-height: 1.9;
-        color: #333;
+        color: var(--text-dark);
         max-width: 650px;
       }
 
       .contacts {
         margin-top: 60px;
+      }
+
+      .contacts h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--main-purple);
+        margin-bottom: 15px;
+      }
+
+      .contacts p {
         font-size: 1.05rem;
-        color: #333;
+        color: var(--text-dark);
+        line-height: 1.8;
       }
 
       .contacts span {
         font-weight: 600;
-        color: #000;
+        color: var(--main-purple);
       }
 
       @media (max-width: 700px) {
@@ -92,6 +108,10 @@
         p {
           font-size: 1.05rem;
         }
+
+        .contacts h2 {
+          font-size: 1.3rem;
+        }
       }
     </style>
   </head>
@@ -103,13 +123,15 @@
       <h1>سلعة — موردك الأول في الدواجن</h1>
 
       <p>
-        مع <strong>سلعة</strong> الدواجن دايم متوفرة، الأسعار أقل ومضمونة، وفوق
-        ذلك تحصل تقارير دقيقة بمشترياتك!  
-        أكثر من 30 مورد يضمنون لك استمرارية
-        التوريد بدون انقطاع — اشتغل وأنت مرتاح البال.
+        مع <strong style="color: var(--main-purple)">سلعة</strong> الدواجن دايم
+        متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل تقارير دقيقة بمشترياتك!
+        <br />
+        أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع — اشتغل وأنت
+        مرتاح البال.
       </p>
 
       <div class="contacts">
+        <h2>فريق المبيعات</h2>
         <p>
           <span>سلمان العنزي</span> — 0550449156<br />
           <span>محمد العمر</span> — 0559335736<br />
