@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سلعة | SALEaah</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Cairo", sans-serif;
+        background-color: #ffffff;
+        background-image: url("pattern.png");
+        background-size: 180px;
+        background-repeat: repeat;
+        color: #000;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .logo {
+        width: 280px;
+        max-width: 80%;
+        margin-bottom: 30px;
+      }
+
+      .contacts {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        padding: 20px 30px;
+      }
+
+      .contacts h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #4a4a4a;
+      }
+
+      .contacts p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #222;
+      }
+
+      .contacts span {
+        font-weight: bold;
+        color: #000;
+      }
+
+      @media (max-width: 600px) {
+        .contacts {
+          width: 85%;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="logo.png" alt="شعار سلعة" class="logo" />
+
+    <div class="contacts">
+      <h2>فريق التواصل</h2>
+      <p>
+        <span>سلمان العنزي</span> — 0550449156<br />
+        <span>محمد العمر</span> — 0559335736<br />
+        <span>صالح اليحيى</span> — 0530030836<br />
+        <span>محمد متوم</span> — 0509884544
+      </p>
+    </div>
+  </body>
+</html>
