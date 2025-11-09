@@ -24,12 +24,8 @@
         position: relative;
         min-height: 100vh;
         overflow-x: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
-      /* الباترن الشفاف */
       .pattern {
         position: absolute;
         top: 0;
@@ -46,34 +42,38 @@
       .content {
         position: relative;
         z-index: 2;
-        width: 100%;
-        max-width: 900px;
-        padding: 60px 40px;
-        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        padding: 0 20px;
         color: var(--text-dark);
       }
 
       .logo {
-        width: 260px;
+        width: 300px;
         margin-bottom: 40px;
       }
 
       h1 {
-        font-size: 1.9rem;
+        font-size: 2.1rem;
         font-weight: 700;
         color: var(--main-purple);
         margin-bottom: 15px;
       }
 
       p {
-        font-size: 1.15rem;
-        line-height: 1.8;
+        font-size: 1.2rem;
+        max-width: 700px;
+        line-height: 1.9;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
       }
 
       .contacts {
-        margin-top: 20px;
+        margin-top: 30px;
       }
 
       .contacts h2 {
@@ -84,7 +84,7 @@
       }
 
       .contacts p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.8;
         color: var(--text-dark);
       }
@@ -95,12 +95,9 @@
       }
 
       @media (max-width: 700px) {
-        .content {
-          padding: 40px 25px;
-        }
-
         .logo {
-          width: 200px;
+          width: 220px;
+          margin-bottom: 25px;
         }
 
         h1 {
@@ -109,6 +106,7 @@
 
         p {
           font-size: 1.05rem;
+          line-height: 1.8;
         }
 
         .contacts h2 {
@@ -122,15 +120,13 @@
 
     <div class="content">
       <img src="logo.png" alt="شعار سلعة" class="logo" />
-
       <h1>سلعة — موردك الأول في الدواجن</h1>
 
       <p>
         مع <strong style="color: var(--main-purple)">سلعة</strong> الدواجن دايم
         متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل تقارير دقيقة بمشترياتك!
-        <br />
-        أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع — اشتغل وأنت
-        مرتاح البال.
+        <br />أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع —
+        اشتغل وأنت مرتاح البال.
       </p>
 
       <div class="contacts">
