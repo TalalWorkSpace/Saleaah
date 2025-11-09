@@ -24,7 +24,7 @@
         overflow-x: hidden;
       }
 
-      /* نرجّع الباترن كما كان: صورة خفيفة شفافة فوق البياض */
+      /* الخلفية الباترن الشفافة */
       body::before {
         content: "";
         position: fixed;
@@ -39,6 +39,7 @@
         z-index: -1;
       }
 
+      /* المحتوى */
       .content {
         display: flex;
         flex-direction: column;
@@ -47,9 +48,20 @@
         padding: 80px 20px;
         max-width: 800px;
         margin: 0 auto;
+        animation: fadeIn 1.5s ease-in-out; /* الحركة الجديدة */
       }
 
-      /* اللوقو الأصلي البنفسجي من الصورة نفسها */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .logo {
         width: 300px;
         margin-bottom: 25px;
@@ -91,6 +103,22 @@
         color: var(--main-purple);
       }
 
+      /* الفوتر */
+      .footer {
+        text-align: center;
+        padding: 25px 0;
+        font-size: 0.95rem;
+        color: #666;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        margin-top: 60px;
+        animation: fadeIn 1.5s ease-in-out 0.5s backwards;
+      }
+
+      .footer span {
+        color: var(--main-purple);
+        font-weight: 600;
+      }
+
       @media (max-width: 750px) {
         .logo {
           width: 220px;
@@ -111,6 +139,7 @@
       }
     </style>
   </head>
+
   <body>
     <div class="content">
       <img src="logo.png" alt="شعار سلعة" class="logo" />
@@ -135,5 +164,10 @@
         </p>
       </div>
     </div>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+      © 2025 <span>سلعة</span> — جميع الحقوق محفوظة
+    </footer>
   </body>
 </html>
