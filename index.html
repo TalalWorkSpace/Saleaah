@@ -26,7 +26,7 @@
         overflow-x: hidden;
       }
 
-      /* الخلفية البنفسجية الخفيفة */
+      /* خلفية الباترن */
       .pattern {
         position: absolute;
         top: 0;
@@ -40,25 +40,23 @@
         z-index: 1;
       }
 
-      /* المحتوى الأساسي */
+      /* المحتوى */
       .content {
         position: relative;
         z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
-        height: 100vh;
-        padding: 0 20px;
+        padding: 100px 20px 60px 20px;
         color: var(--text-dark);
-        transform: translateY(70px); /* نزلنا المحتوى شوي لتحت */
       }
 
-      /* اللوقو */
+      /* اللوقو: نكبر العرض وننزله فقط */
       .logo {
-        width: 380px; /* أكبر وأوضح */
-        margin-bottom: 50px;
+        width: 430px; /* أعرض بنسبة ممتازة */
+        margin-bottom: 20px;
+        transform: translateY(40px); /* نزول الشعار فقط */
       }
 
       /* العنوان */
@@ -80,7 +78,7 @@
 
       /* قسم التواصل */
       .contacts {
-        margin-top: 30px;
+        margin-top: 20px;
       }
 
       .contacts h2 {
@@ -101,15 +99,11 @@
         color: var(--main-purple);
       }
 
-      /* استجابة للجوال */
+      /* للموبايل */
       @media (max-width: 700px) {
         .logo {
-          width: 260px;
-          margin-bottom: 35px;
-        }
-
-        .content {
-          transform: translateY(40px);
+          width: 300px;
+          transform: translateY(25px);
         }
 
         h1 {
@@ -136,8 +130,7 @@
 
       <p>
         مع <strong style="color: var(--main-purple)">سلعة</strong> الدواجن دايم
-        متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل تقارير دقيقة بمشترياتك!
-        <br />
+        متوفرة، الأسعار أقل ومضمونة، وفوق ذلك تحصل تقارير دقيقة بمشترياتك!<br />
         أكثر من 30 مورد يضمنون لك استمرارية التوريد بدون انقطاع — اشتغل وأنت
         مرتاح البال.
       </p>
